@@ -1,0 +1,59 @@
+.content {
+  padding: 30px;
+}
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.todo {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+main {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+main label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+main input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.ruc {
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+}
+.ruc button {
+  margin-bottom: 18px;
+}
+.ruc input {
+  font-size: large;
+}
+#botones {
+  display: flex;
+  gap: 20px;
+}
+#botones button {
+  padding: 10px 20px;
+}

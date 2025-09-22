@@ -1,0 +1,17 @@
+<title>Login - LIMDES S.A.C.</title>
+
+<div class="login-background">
+    <div class="login-container">
+        <h2>GRANOTEC S.A</h2>
+        <form [formGroup]="formLogin">
+            <label for="usuario">Usuario:</label>
+            <input type="text" formControlName="username" placeholder="Ingrese su usuario" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" formControlName="password" placeholder="Ingrese su contraseña" required>
+
+            <button (click)="login()" class="btn">Ingresar</button>
+        </form>
+    </div>
+</div>
+

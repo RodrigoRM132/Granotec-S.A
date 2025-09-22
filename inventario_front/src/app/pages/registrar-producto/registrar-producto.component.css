@@ -1,0 +1,33 @@
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+/* Clase para el formulario cuando está oculto */
+.form-container {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Clase cuando el formulario está visible */
+.form-container.show {
+  height: auto;
+  opacity: 1;
+}

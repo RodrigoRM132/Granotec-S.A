@@ -1,0 +1,88 @@
+<main class="col-md-9 col-lg-10 content">
+  <div class="w-full flex flex-row items-center justify-center my-6">
+    <h2 class="font-bold text-gray-950 text-3xl">Registrar Nuevo Producto</h2>
+  </div>
+  <button
+    (click)="toggleForm()"
+    class="bg-blue-500 text-white py-2 px-4 rounded-md font-bold hover:bg-customGreenDark transition-colors mb-4"
+  >
+    {{ showForm ? "Ocultar Formulario" : "Registrar Nuevo Producto" }}
+  </button>
+  @if(showForm){
+  <form class="form-container" [ngClass]="{ show: showForm }">
+    <label for="nombre">Nombre:</label>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      [(ngModel)]="NewProducto.nombre"
+      required
+    />
+
+    <label for="descripcion">Descripción:</label>
+    <textarea
+      id="descripcion"
+      name="descripcion"
+      [(ngModel)]="NewProducto.descripcion"
+      required
+    ></textarea>
+
+    <label for="unidad">Unidad de Medida:</label>
+    <input
+      type="text"
+      id="unidad"
+      name="unidad"
+      [(ngModel)]="NewProducto.unidad_medida"
+      required
+    />
+
+    <label for="categoria" class="block">Categoría:</label>
+    <select
+      name="categoria"
+      id="categoria"
+      class="my-3 text-lg bg-gray-100 text-black rounded-md p-2"
+      [(ngModel)]="NewProducto.categoria_id"
+    >
+      @for (categoria of Categorias; track $index) {
+      <option [value]="categoria.id">{{ categoria.nombre }}</option>
+      }
+    </select>
+
+    <label for="linea" class="block">Linea:</label>
+    <select
+      name="linea"
+      id="linea"
+      class="my-3 text-lg bg-gray-100 text-black rounded-md p-2"
+      [(ngModel)]="NewProducto.linea_id"
+    >
+      @for (linea of Lineas; track $index) {
+      <option [value]="linea.id">{{ linea.nombre }}</option>
+      }
+    </select>
+
+    <label for="precio" class="block">Precio Unitario:</label>
+    <input
+      type="number"
+      id="precio"
+      name="precio"
+      [(ngModel)]="NewProducto.precio"
+      required
+    />
+
+    <button
+      type="button"
+      (click)="Registrar()"
+      class="bg-blue-500 text-white py-2 px-4 rounded-md font-bold hover:bg-customGreenDark transition-colors"
+    >
+      Registrar Producto
+    </button>
+  </form>
+  }
+
+  <app-tables
+    [data]="Productos"
+    [columns]="['id', 'nombre', 'descripcion', 'precio', 'Stock']"
+    [ruta]="'dashboard/consultar-producto'"
+    [iconType]="'producto'"
+  />
+</main>

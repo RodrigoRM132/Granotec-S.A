@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-InventarioBackApplication<inventario_back>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "upn.pe.inventario_back.InventarioBackApplication",
+            "projectName": "inventario_back",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

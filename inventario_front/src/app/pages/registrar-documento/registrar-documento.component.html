@@ -1,0 +1,39 @@
+<main class="col-md-9 col-lg-10 content">
+  <h2>Registrar Documento de Entrada</h2>
+  <form action="#" method="POST">
+    <!-- Datos del Documento de Entrada -->
+    <label for="num_documento">Número de Documento:</label>
+    <input type="text" id="num_documento" name="num_documento" required />
+
+    <label for="fecha_ingreso">Fecha de Ingreso:</label>
+    <input type="date" id="fecha_ingreso" name="fecha_ingreso" required />
+
+    <label for="proveedor">Proveedor:</label>
+    <select id="proveedor" name="proveedor" required>
+      <option value="">Seleccione un proveedor</option>
+      <!-- Aquí se llenarán las opciones de proveedores -->
+      <option value="1">Proveedor 1</option>
+      <option value="2">Proveedor 2</option>
+    </select>
+
+    <!-- Lista de Productos -->
+    <div class="productos">
+      <h3>Lista de Productos</h3>
+      <div class="producto-item">
+        <label for="producto_1">Producto 1:</label>
+        <select id="producto_1" name="producto_1" required>
+          <option value="">Seleccione un producto</option>
+          <!-- Aquí se llenarán las opciones de productos -->
+          <option value="1">Producto A</option>
+          <option value="2">Producto B</option>
+        </select>
+
+        <label for="cantidad_1">Cantidad:</label>
+        <input type="number" id="cantidad_1" name="cantidad_1" required />
+      </div>
+    </div>
+
+    <!-- Confirmar el Documento de Entrada -->
+    <button type="submit">Confirmar Documento de Entrada</button>
+  </form>
+</main>

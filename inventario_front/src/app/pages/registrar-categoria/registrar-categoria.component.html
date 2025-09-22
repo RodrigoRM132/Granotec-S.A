@@ -1,0 +1,25 @@
+<main>
+  <div class="w-full flex flex-row items-center justify-center my-6">
+    <h2 class="font-bold text-gray-950 text-3xl">Registrar Nueva Categoria</h2>
+  </div>
+
+  <form class="mb-6">
+    <label for="nombre" class="text-lg">Nombre:</label>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      [(ngModel)]="NewCategoria.nombre"
+      required
+      class="border border-gray-300 p-2 rounded-md mx-4"
+    />
+    <button
+      type="button"
+      (click)="Registrar()"
+      class="bg-blue-500 text-white py-2 px-4 rounded-md font-bold hover:bg-customGreenDark transition-colors"
+    >
+      Registrar
+    </button>
+  </form>
+  <app-tables [data]="Categorias" [columns]="['id', 'nombre']" />
+</main>
